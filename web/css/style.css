@@ -1,0 +1,652 @@
+/**Postavljanje stila cijelog templejta**/
+body {
+    margin: 0; /* postavljanje margina body elementa te body paddinga na 0 */
+    padding: 0; 
+    font-family: 'Quicksand', sans-serif; /* font stranice */
+    overflow-x: hidden; /* isključiti horizontalni skrolling  */
+	background:url(../images/pozadina.gif) center top repeat; /* pozadina cijelog bodya */
+}
+/* Svi elementi imaju box formatiranje */
+* {
+    box-sizing: border-box; 
+}
+/* isključivanje dekoracije na hiperlinkovima */
+a {
+    text-decoration: none; 
+}
+/* za h2 naslov boja,margina,veličina*/
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: #009688; 
+    margin-top: 0px; 
+    font-size: 32px; 
+}
+/*Boja i veličina paragraf elementa*/
+p {
+    color: #000;
+    font-size: 14px;
+}
+/*Postavke za neodređene liste, poništiti osnovne postavke*/
+ul {
+    list-style: none; 
+    margin: 0;
+    padding: 0; 
+    font-size: 14px;
+}
+/*Način prikaza za article i figure elemente*/
+article,figure{
+	display:block;
+}
+
+/*kontejner sa sirinom elementa*/
+.container {
+    width: 960px; 
+    margin: 0 auto;
+	
+}
+
+/*resetovanje elementa*/
+.clear {
+    clear: both; 
+    content: ''; 
+}
+
+
+/** Navigacija **/
+
+#main-nav {
+    width: 100%;
+    background: #009688;  /*Boja pozadine*/
+    position: fixed; 
+    z-index: 9999; /* Prvenstva prikaza */
+    top: 0;
+	
+}
+
+#main-nav ul {
+    list-style: none;
+    margin: 0;
+    margin-left: 18%;
+	margin-right: 15%;
+	display:inline-block;
+}
+
+#main-nav ul a {
+    font-size: 12px;
+    color: #F8F8F8;      
+    display:inline-block;	
+}
+
+#main-nav .sadrzajNav {
+    display: inline-block;
+    width: 100%;
+
+	
+}
+/***Dizajn navigacijskih linkova***/
+
+/*Način prikaza*/
+
+#main-nav .linkovi {
+    display: inline-block;
+}
+/*Način prikaza lista*/
+#main-nav .linkovi li {
+    display: inline-block;
+}
+/*Način prikaza stavki hiperlinka*/
+#main-nav .linkovi a {
+    display: block;
+    padding: 15px 14px;
+	font-size:15px;
+	font-weight:bold;
+}
+/*Način prikaza hover efekta za
+stavke nenumerisane liste*/
+#main-nav ul li:hover {
+    background: #00897B;
+}
+
+/* Index stranica */
+
+.content {
+    margin-top: 64px;
+}
+
+.content .row .box {
+    display: block;
+    width: 48%;
+    margin-right: 4%; 
+    float: left;
+}
+.content .row .box3 {
+    display: block;
+    width: 29%;
+    margin-right: 4%; /* Definisanje gornje margine u procentima */
+    float: left;	
+}
+
+.content .row .bezMargine {
+    margin-right: 0;
+}
+.content .row .marginaLijevo {
+    margin-left: 4%;	
+}
+.content .title {
+    font-size: 20px;
+}
+.content .videoPrikaz {
+    margin-top: 50px;
+}
+
+/**Footer postavke**/
+
+.content footer {
+    margin-top: 50px;
+    padding: 7px;
+    text-align: center; 
+    background: #009688;  
+}
+
+.content footer p {
+    color: #E0F2F1;
+}
+
+/* PUTOVANJA stranica */
+
+.putovanja { /*kontejner putovanja*/
+    margin-top: 120px;
+}
+
+.putovanja ul li, .kontakt ul li {
+    background: #ececec;
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #dadada; /* Definisanje donjeg bordera */
+}
+
+.putovanja ul li:last-child, .kontakt ul li:last-child {
+    border-bottom: none; /* Ponistavanje donjeg bordera */
+}
+
+.putovanja .slika {
+	/* Poništavanje trenutne pozadine */
+    background: none; 
+    display: block;
+    padding: 0;
+}
+
+.putovanja img {
+	/* Definisanje širine i maksimalne visine elementa */
+    width: 100%;
+    max-height: 200px; 
+}
+
+
+/***Početna- dio sa akcija elementima***/
+.akcija {
+    margin-top: 120px;
+}
+
+.akcija ul li {
+    background: #fffafa;
+    display: block;
+    padding: 10px;
+    
+}
+
+.akcija ul li:last-child{
+    border-bottom: none; /* Ponistavanje donjeg bordera */
+}
+
+.akcija .slika {
+    background: none; /* Poništavanje trenutne pozadine */
+    display: block;
+    padding: 0;
+}
+/*prikaz slike unutar div elementa*/
+.akcija img {
+    width: 100%;
+    max-height: 200px; 
+}
+
+.content .detalji {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: #e6f3ff;
+}
+
+/* KONTAKT */
+
+.kontakt {
+    margin-top: 120px;
+}
+
+.kontakt ul li {
+    background: none;
+    border-bottom: none;
+    padding-left: 0; /* Ponistavanje lijevog paddinga */
+}
+
+.kontakt ul li i {
+    font-size: 16px;
+}
+
+.kontakt form input {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px; /* Definisanje donje margine */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.kontakt form textarea {
+    display: block;
+    width: 400px;
+    max-width: 400px; /* Definisanje maksimalne sirine */
+    height: 200px;
+    max-height: 200px; /* Definisanje maksimalne visine */
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.kontakt form .buttons {
+    margin-top: 10px;
+	display:inline;
+}
+
+.kontakt form .btn1 {
+    width: 22%;
+	margin-left:35%;
+    background: #e6f3ff; 
+	border: 1px solid #009688;
+	 box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Definisanje tipa kursora */
+	
+}
+.posalji{ /*button element*/
+font-size:15px;	
+color:#009688; 
+}
+
+/* REZERVACIJA */
+
+.registration {
+    margin-top: 120px;
+}
+
+.registration form {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.registration form input, .registration form select, .registration form option {
+    display: block;
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.registration form textarea {
+    display: block;
+    width: 400px;
+    max-width: 400px;
+    height: 200px;
+    max-height: 200px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.registration form .buttons {
+    margin-top: 20px;
+	display:inline-block;
+}
+
+.registration form .btn1 {
+   
+	width: 40%;
+	margin-left:31%;
+    background: #e6f3ff; 
+	border: 1px solid #009688;
+	 box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Definisanje tipa kursora */
+}
+
+.registration h2 {
+    text-align: center;
+}
+
+/************  Za o Nama stranicu  *************/
+/* O NAMA */
+
+.oNamaa {
+    margin-top: 64px;
+}
+
+.Onama {
+	width:100%;
+	padding:37px 0 45px;
+	position:relative;
+	z-index:1;
+}
+
+.oNamaBox {
+  background: #e6f3ff none repeat scroll 0 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  padding:10px
+}
+
+.wrapper {
+	width:100%;
+	overflow:hidden;
+}
+
+.img-postavi-ispod {
+	margin-bottom:25px;
+}
+/*Naslovi o nama stranice*/
+.naslov {
+	font-style: oblique;
+	font-size:25px;
+	display: inline-block;
+	color:#009688;
+	text-align:center;
+	font-weight:bold;
+	text-align:center;
+	margin-left:280px;
+	
+}
+.naslovP{
+	width:30%;
+	margin-left:35%;
+	font-style: oblique;
+	font-size:25px;
+	display: inline-block;
+	color:#009688;
+	text-align:center;
+	font-weight:bold;
+	text-align:center;
+}
+.slika-polozaj {
+	float:left;
+	margin:0 25px 0px 0;
+}
+.dugme {
+	width:16%;
+	display:inline-block;
+	padding:10px 10px;
+	font-size:15px;
+	line-height:1.13em;
+	color:#fff;
+	background:#009688;
+	text-decoration:none;
+	text-shadow: 0 0 4px #FF0000, 0 0 4px #0000FF;
+}
+.dugme:hover {
+	background:#222;
+}
+.formatJustify{
+	display: flex;
+    text-align: justify;
+	font-size:16px;
+	color:#009688;
+}
+/*hover za slike*/
+
+.hover-sjena:hover {
+  box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.naslov_Destinacija{
+	font-style: oblique;
+	font-size:20px;
+	display: inline-block;
+	color:#009688;
+	width:70%;
+	margin-left:15%;
+	margin-right:15%;
+	font-weight:bold;
+	padding: 10px;
+    text-align: center;
+}
+.dugme1 {
+	display:inline-block;
+	text-align:center;
+	width:46%;
+	padding:7px 6px;
+	font-size:14px;
+	margin-left:27%;
+	line-height:1.13em;
+	color:#fff;
+	background:#009688;
+	text-decoration:none;
+	text-shadow: 0 0 4px #FF0000, 0 0 4px #0000FF;
+	
+}
+.dugme1:hover {
+	background:#222;
+}
+
+/** Zanimljivosti */
+
+.zanimljivosti-sekcija {
+  background: rgba(0, 0, 0, 0) url("../images/putovanje2.jpg") repeat scroll 0 0;
+  padding: 100px 0;
+  position: relative;
+  height:320px;
+}
+.zanimljivosti-m {
+  border-radius: 70%;
+  color: #009688;
+  height: 288px;
+  margin: 0 auto;
+  text-align: center;
+  width: 188px;
+}
+.zanimljivosti-m .dio {
+  display: table-cell;
+  vertical-align: middle;
+}
+.zanimljivosti-m h2 {
+  color: #ffffff;
+  margin: 0 auto;
+}
+.zanimljivosti-m p {
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0 auto;
+   color: #ffffff;
+}
+.zanimljivosti-m h2 .fa {
+  display: block;
+   border-radius: 50%;
+}
+.div_zindex {
+  position: relative;
+  z-index: 1;
+}
+.tamni-prijelaz {
+  background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/*dizajn horizontalne linije*/
+.horLinija{
+	width:50%;
+	margin-left:25%;
+	border:none;
+    height: 45px;
+	margin-top: 0;
+	border-bottom: 1px solid #009688;
+	box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 10px; 
+	
+}
+.hor2 {
+	border-bottom: 1px solid #009688;
+	box-shadow: 0 20px 20px -20px #333;
+	width:35%;
+}
+
+.centar{
+	
+	font-size:25px;
+	display: inline-block;
+	color:#009688;
+	text-align:center;
+	font-weight:bold;
+	text-align:center;
+	width:56%;
+	margin-left:22%;
+	
+}
+
+/*Više o putovanjima*/
+
+.sadrzaj2 {
+	padding-bottom:31px
+}
+.sadr {
+	width:100%;
+	overflow:hidden
+}
+/*formatiranje,kolone,padding,margine*/
+.col1, .col2, .col3, .cols {
+	float:left
+}
+.cols {
+	width:300px
+}
+.col1 {
+	width:52%;
+}
+.col2 {
+	width:38%;
+}
+.col3 {
+	width:570px
+}
+.pad_left1 {
+	padding-left:5%;
+}
+.pad_bot1 {
+	padding-bottom:13px
+}
+.pad_bot2 {
+	padding-bottom:24px
+}
+.marg_right1 {
+	margin-right:20px
+}
+.left {
+	float:left
+}
+.marg_right1 {
+	margin-right:20px
+}
+
+figure{
+	display:block;
+	background: transparent;
+	border: 0 none;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: top;
+}
+
+.dojmovi li span {
+    display:inline-block;
+	float:left;
+	width:40px;
+	height:40px;
+	font-size:30px;
+	color:#faf3ed;
+	line-height:34px;
+	text-align:center;
+	background:#80c3ff;
+	margin-right:20px;
+	margin-top:10px;
+
+}
+.dojmovi li p {
+	float:left;
+	width:200px;
+	padding-bottom:15px;
+	text-align: justify;
+	font-style:italic;
+	margin-top:0px;
+	margin-top:10px;
+}
+/*dojam potpis*/
+.potpis{
+  font: 400 20px/1.3 'Oleo Script', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+  padding-top:2px
+}
+
+/**slike-pojedinacna galerija-specijalne ponude**/
+
+div.gallery1 {
+    margin: 10px;
+    float: left;
+    width: 127px;
+}
+
+div.gallery1:hover {
+    border: 0px solid #777;
+}
+
+div.gallery1 img {
+    width: 100%;
+    height: 80px;
+	max-height:80px;
+}
+
+/******uslovi putovanja*****/
+
+.box4 { /*4 kolone*/
+    display: block;
+    width: 23%;
+    margin-right: 2%; 
+    float: left;
+	
+}
+.usloviBox { /*Pozadina,sjena,margina,padding*/
+  background: #80c3ff none repeat scroll 0 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  padding:10px
+}
+
+.boxDrzava { /*Pozadina,sjena,margina,padding*/
+  background: #80c3ff none repeat scroll 0 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  padding:10px;
+  max-height :50px;
+  max-width: 50px;
+}
+
+.usloviNaslov { /*Dizajn naslova*/
+    font-size: 20px;
+    color: #264040;
+}
+.siva{
+	background-color:#005299;
+}
